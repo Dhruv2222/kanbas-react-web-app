@@ -1,0 +1,165 @@
+.wd-modules,
+.wd-modules * {
+  border-radius: 0%;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.wd-modules {
+  margin: 5px;
+}
+
+.wd-modules > li {
+  background-color: lightgray;
+  border: 1px solid gray !important;
+  border-left: none !important;
+}
+
+.wd-modules > li > div {
+  padding: 6px;
+  border-left: 1px solid gray !important;
+}
+
+.wd-modules > li > ul > li {
+  padding: 5px;
+  border-top: 1px solid gray !important;
+  border-left: 2px solid green;
+}
+
+.wd-modules > li {
+  margin-bottom: 20px;
+}
+
+.wd-button-style {
+  border-style: solid;
+  border-color: darkgray;
+  height: 40px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.wd-float-right {
+  float: right;
+}
+
+.wd-course-status-btn li a:link { 
+  text-decoration: none; 
+  color: black;
+} 
+.wd-course-status-btn li a:visited { 
+  text-decoration: none; 
+  color: black;
+} 
+.wd-course-status-btn li a:hover { 
+  text-decoration: none; 
+  color: black;
+} 
+.wd-course-status-btn li a:active { 
+  text-decoration: none; 
+  color: black;
+}
+
+.wd-course-status-btn{ 
+  text-decoration: none; 
+  color: black;
+  padding-left: 0;
+  /* width: 250px; */
+}
+
+.wd-todo-description {
+  color: gray;
+  font-size: small;
+}
+
+.wd-todo-heading a:link {
+  text-decoration: none; 
+color: red;
+}
+
+.wd-todo-heading a:visited {
+  text-decoration: none; 
+color: red;
+}
+
+.wd-breadcrumb-link a:link {
+  text-decoration: none; 
+color: red;
+margin: 5px;
+}
+
+.wd-breadcrumb-link a:visited {
+  text-decoration: none; 
+color: red;
+margin: 5px;
+}
+
+.wd-menu-button a:link {
+  padding-right: 20px;
+  color: red;
+  margin-left: 25px;
+}
+
+.wd-menu-button a:visited {
+  padding-right: 20px;
+  color: red;
+  margin-left: 25px;
+}
+
+.wd-publish-btn {
+  padding-right: 0;
+  border-radius: 0;
+}
+
+.wd-unpublish-btn {
+  padding-left: 0;
+  border-radius: 0;
+}
+
+.wd-navbar {
+  margin-bottom: 0;
+}
+
+.wd-menu-font {
+  color: white;
+  text-align: center;
+}
+
+.form-inline {
+  margin-bottom: 0;
+}
+
+.wd-kanbas-menu-list {
+  list-style: none;
+}
+
+.wd-kanbas-menu-list li a:link {
+  text-decoration: none;
+  color: red;
+}
+
+.wd-kanbas-menu-list li a:visited {
+  text-decoration: none;
+  color: red;
+}
+
+.wd-kanbas-menu-list-icons {
+  color: black;
+}
+
+.wd-navbar-menu-icons {
+  /* background-color: black; */
+  box-shadow: none !important;
+  padding: 0;
+}
+
+.wd-dropdown-cross-btn a:link {
+  text-decoration: none;
+  color: black;
+}
+
+.wd-dropdown-cross-btn a:visited {
+  text-decoration: none;
+  color: black;
+}
