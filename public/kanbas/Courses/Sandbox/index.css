@@ -1,36 +1,36 @@
 .wd-navbar {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .wd-menu-font {
-    color: white;
-    text-align: center;
+  color: white;
+  text-align: center;
 }
 
 .wd-navbar-menu-icons {
-    /* background-color: black; */
-    box-shadow: none !important;
-    padding: 0;
+  /* background-color: black; */
+  box-shadow: none !important;
+  padding: 0;
 }
 
 .form-inline {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .wd-kanbas-menu-list {
-    list-style: none;
+  list-style: none;
 }
 
 .wd-kanbas-menu-list li a:link {
-    text-decoration: none;
-    color: red;
+  text-decoration: none;
+  color: red;
 }
 
 .wd-kanbas-menu-list li a:visited {
-    text-decoration: none;
-    color: red;
+  text-decoration: none;
+  color: red;
 }
 
 .wd-kanbas-menu-list-icons {
-    color: black;
+  color: black;
 }

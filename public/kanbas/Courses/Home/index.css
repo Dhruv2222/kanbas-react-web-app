@@ -44,25 +44,25 @@
   float: right;
 }
 
-.wd-course-status-btn li a:link { 
-  text-decoration: none; 
+.wd-course-status-btn li a:link {
+  text-decoration: none;
   color: black;
-} 
-.wd-course-status-btn li a:visited { 
-  text-decoration: none; 
+}
+.wd-course-status-btn li a:visited {
+  text-decoration: none;
   color: black;
-} 
-.wd-course-status-btn li a:hover { 
-  text-decoration: none; 
+}
+.wd-course-status-btn li a:hover {
+  text-decoration: none;
   color: black;
-} 
-.wd-course-status-btn li a:active { 
-  text-decoration: none; 
+}
+.wd-course-status-btn li a:active {
+  text-decoration: none;
   color: black;
 }
 
-.wd-course-status-btn{ 
-  text-decoration: none; 
+.wd-course-status-btn {
+  text-decoration: none;
   color: black;
   padding-left: 0;
   /* width: 250px; */
@@ -74,25 +74,25 @@
 }
 
 .wd-todo-heading a:link {
-  text-decoration: none; 
-color: red;
+  text-decoration: none;
+  color: red;
 }
 
 .wd-todo-heading a:visited {
-  text-decoration: none; 
-color: red;
+  text-decoration: none;
+  color: red;
 }
 
 .wd-breadcrumb-link a:link {
-  text-decoration: none; 
-color: red;
-margin: 5px;
+  text-decoration: none;
+  color: red;
+  margin: 5px;
 }
 
 .wd-breadcrumb-link a:visited {
-  text-decoration: none; 
-color: red;
-margin: 5px;
+  text-decoration: none;
+  color: red;
+  margin: 5px;
 }
 
 .wd-menu-button a:link {

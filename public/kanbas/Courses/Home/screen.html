@@ -68,7 +68,10 @@
 
       <!-- Rest of the middle content -->
       <div class="flex-fill">
-        <div class="d-none d-md-flex d-flex m-4" style="margin-left: 80px !important">
+        <div
+          class="d-none d-md-flex d-flex m-4"
+          style="margin-left: 80px !important"
+        >
           <div class="d-block wd-menu-button">
             <a href="#"><i class="fa fa-bars"></i></a>
           </div>
@@ -86,19 +89,24 @@
           </div>
           <div class="ms-auto">
             <button type="button" class="btn btn-light wd-button-style">
-              <i class="fa fa-binoculars"></i>  Student View
+              <i class="fa fa-binoculars"></i> Student View
             </button>
           </div>
         </div>
-        
+
         <!-- This navbar is shown only when screen size is below medium -->
         <div class="d-xs-block d-md-none">
           <nav class="navbar navbar-light bg-dark justify-content-between">
-
-            <button type="button" class="btn btn-dark wd-navbar-menu-icons" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="fa fa-bars p-4" style="color: white;"></i>
-            </button>
-            <div class="dropdown-menu w-100">
+            <a href="/Kanbas/Courses/Sandbox/kanbas_bar.html"
+              ><button
+                type="button"
+                class="btn btn-dark wd-navbar-menu-icons"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa fa-bars p-4" style="color: white"></i></button
+            ></a>
+            <!-- <div class="dropdown-menu w-100">
               <div class="row">
                 <div class="col-12 text-end wd-dropdown-cross-btn">
                   <a href="#"><i class="fa fa-times p-4"></i></a>
@@ -144,17 +152,25 @@
                         <i class="fa fa-chevron-right float-end px-4 wd-kanbas-menu-list-icons"></i></a>
                   </li>
               </ul>
-            </div>
-      
-              
-              <span class="wd-menu-font">CS4550.12631.202410<br>Modules</span>
-              <form class="form-inline">
-                <i class="fa fa-binoculars p-1" style="color: white;"></i>
-                
-                <button type="button" class="btn btn-dark wd-navbar-menu-icons" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="fa fa-chevron-down p-4" style="color: white;"></i>
-                </button>
-                <div class="dropdown-menu w-100">
+            </div> -->
+
+            <span class="wd-menu-font">CS4550.12631.202410<br />Modules</span>
+            <form class="form-inline">
+              <i class="fa fa-binoculars p-1" style="color: white"></i>
+
+              <a href="/Kanbas/Courses/Sandbox/course_bar.html"
+                ><button
+                  type="button"
+                  class="btn btn-dark wd-navbar-menu-icons"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i
+                    class="fa fa-chevron-down p-4"
+                    style="color: white"
+                  ></i></button
+              ></a>
+              <!-- <div class="dropdown-menu w-100">
                   <ul class="wd-kanbas-menu-list">
                     <li class="wd-active">
                       <a href="/Kanbas/Courses/Home/screen.html"
@@ -247,9 +263,9 @@
                       >
                     </li>
                   </ul>
-                </div>
-              </form>
-            </nav>
+                </div> -->
+            </form>
+          </nav>
         </div>
 
         <hr class="d-none d-md-flex" />
@@ -259,7 +275,7 @@
             <!-- Course navigation side  -->
             <div class="d-none d-md-block" style="margin-left: 80px">
               <ul style="margin-top: 0" class="wd-navigation">
-                <li  class="wd-active">
+                <li class="wd-active">
                   <a href="/Kanbas/Courses/Home/screen.html"> Home</a>
                 </li>
                 <li>
@@ -331,7 +347,12 @@
               <button type="button" class="btn btn-light wd-button-style">
                 View Progress
               </button>
-              <button type="button" class="btn btn-light dropdown-toggle wd-button-style" data-bs-toggle="dropdown" aria-expanded="false">
+              <button
+                type="button"
+                class="btn btn-light dropdown-toggle wd-button-style"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
                 <i class="fa fa-check-circle-o text-success p-2"></i>Publish All
               </button>
               <ul class="dropdown-menu">
@@ -501,12 +522,18 @@
                   </button> -->
                   <div class="row">
                     <div class="col-md-6 wd-publish-btn">
-                      <button type="button" class="btn btn-light wd-button-style w-100">
+                      <button
+                        type="button"
+                        class="btn btn-light wd-button-style w-100"
+                      >
                         <i class="fa fa-ban"></i> Unpublished
                       </button>
                     </div>
                     <div class="col-md-6 wd-unpublish-btn">
-                      <button type="button" class="btn btn-success wd-button-style w-100">
+                      <button
+                        type="button"
+                        class="btn btn-success wd-button-style w-100"
+                      >
                         <i class="fa fa-check-circle"></i> Published
                       </button>
                     </div>
@@ -626,8 +653,5 @@
         </div>
       </div>
     </div>
-        <!-- Add this before the closing </body> tag -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
   </body>
 </html>

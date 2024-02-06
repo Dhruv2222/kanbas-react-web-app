@@ -1,169 +1,185 @@
 <head>
-    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="/Kanbas/Courses/Sandbox/index.css" />
-    <!-- <link rel="stylesheet" href="/Kanbas/styles.css" /> -->
+  <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="/Kanbas/Courses/Sandbox/index.css" />
+  <!-- <link rel="stylesheet" href="/Kanbas/styles.css" /> -->
 </head>
 <body>
-    <nav class="navbar navbar-light bg-dark justify-content-between">
+  <nav class="navbar navbar-light bg-dark justify-content-between">
+    <button
+      type="button"
+      class="btn btn-dark wd-navbar-menu-icons"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      <i class="fa fa-bars p-4" style="color: white"></i>
+    </button>
+    <div class="dropdown-menu w-100">
+      <div class="row">
+        <div class="col-12 text-end">
+          <i class="fa fa-times p-4"></i>
+        </div>
+      </div>
+      <ul class="wd-kanbas-menu-list">
+        <li>
+          <a href="/Kanbas/Dashboard/screen.html">
+            <i class="fa fa-tachometer"></i>&nbsp;&nbsp; Dashboard</a
+          >
+        </li>
+        <li>
+          <a href="/Kanbas/Account/Profile/screen.html">
+            &nbsp;&nbsp;<i class="fa fa-user"></i> Account
+            <i
+              class="fa fa-chevron-right float-end px-4 wd-kanbas-menu-list-icons"
+            ></i>
+          </a>
+        </li>
 
-      <button type="button" class="btn btn-dark wd-navbar-menu-icons" data-bs-toggle="dropdown" aria-expanded="false">
-        <i class="fa fa-bars p-4" style="color: white;"></i>
+        <li>
+          <a href="/Kanbas/Courses/Home/screen.html"
+            >&nbsp;&nbsp;<i class="fa fa-book"></i> Courses
+            <i
+              class="fa fa-chevron-right float-end px-4 wd-kanbas-menu-list-icons"
+            ></i
+          ></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-calendar"></i>&nbsp;&nbsp; Calendar</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-envelope-o"></i>&nbsp;&nbsp; Inbox</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-clock-o"></i>&nbsp;&nbsp; History</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-television"></i>&nbsp;&nbsp; Studio</a>
+        </li>
+        <li>
+          <a href="#"
+            >&nbsp;&nbsp;<i class="fa fa-sign-out"></i>&nbsp;&nbsp; Commons
+            <i
+              class="fa fa-chevron-right float-end px-4 wd-kanbas-menu-list-icons"
+            ></i
+          ></a>
+        </li>
+        <li>
+          <a href="#"
+            >&nbsp;&nbsp;<i class="fa fa-question-circle"></i>&nbsp;&nbsp; Help
+            <i
+              class="fa fa-chevron-right float-end px-4 wd-kanbas-menu-list-icons"
+            ></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+
+    <span class="wd-menu-font">CS4550.12631.202410<br />Modules</span>
+    <form class="form-inline">
+      <i class="fa fa-binoculars p-1" style="color: white"></i>
+
+      <button
+        type="button"
+        class="btn btn-dark wd-navbar-menu-icons"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <i class="fa fa-chevron-down p-4" style="color: white"></i>
       </button>
       <div class="dropdown-menu w-100">
-        <div class="row">
-          <div class="col-12 text-end">
-            <i class="fa fa-times p-4"></i>
-          </div>
-        </div>
         <ul class="wd-kanbas-menu-list">
-          <li>
-            <a href="/Kanbas/Dashboard/screen.html">
-              <i class="fa fa-tachometer"></i>&nbsp;&nbsp; Dashboard</a
+          <li class="wd-active">
+            <a href="/Kanbas/Courses/Home/screen.html"
+              ><i class="fa fa-home"></i> <b>Home</b></a
             >
           </li>
           <li>
-              <a href="/Kanbas/Account/Profile/screen.html">
-                  &nbsp;&nbsp;<i class="fa fa-user"></i> Account
-                  <i class="fa fa-chevron-right float-end px-4 wd-kanbas-menu-list-icons"></i>
-              </a>
+            <a href="/Kanbas/Courses/Modules/screen.html"
+              ><i class="fa fa-circle-thin"></i> Modules</a
+            >
           </li>
-          
           <li>
-              <a href="/Kanbas/Courses/Home/screen.html"
-                >&nbsp;&nbsp;<i class="fa fa-book"></i> Courses
-                <i class="fa fa-chevron-right float-end px-4 wd-kanbas-menu-list-icons"></i></a
-              >
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-calendar"></i>&nbsp;&nbsp; Calendar</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-envelope-o"></i>&nbsp;&nbsp; Inbox</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-clock-o"></i>&nbsp;&nbsp; History</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-television"></i>&nbsp;&nbsp; Studio</a>
-            </li>
-            <li>
-              <a href="#">&nbsp;&nbsp;<i class="fa fa-sign-out"></i>&nbsp;&nbsp; Commons
-                  <i class="fa fa-chevron-right float-end px-4 wd-kanbas-menu-list-icons"></i></a>
-            </li>
-            <li>
-              <a href="#">&nbsp;&nbsp;<i class="fa fa-question-circle"></i>&nbsp;&nbsp; Help
-                  <i class="fa fa-chevron-right float-end px-4 wd-kanbas-menu-list-icons"></i></a>
-            </li>
+            <a href="/Kanbas/Courses/Piazza/index.html"
+              ><i class="fa fa-plug"></i> Piazza</a
+            >
+          </li>
+          <li>
+            <a href="/Kanbas/Courses/Zoom_Meetings/index.html"
+              ><i class="fa fa-plug"></i> Zoom Meetings</a
+            >
+          </li>
+          <li>
+            <a href="/Kanbas/Courses/Assignments/screen.html"
+              ><i class="fa fa-pencil-square-o"></i> Assignments</a
+            >
+          </li>
+          <li>
+            <a href="/Kanbas/Courses/Quizzes/screen.html"
+              ><i class="fa fa-rocket"></i> Quizzes</a
+            >
+          </li>
+          <li>
+            <a href="/Kanbas/Courses/Grades/screen.html"
+              ><i class="fa fa-book"></i> Grades</a
+            >
+          </li>
+          <li>
+            <a href="/Kanbas/Courses/People/screen.html"
+              ><i class="fa fa-users"></i> People</a
+            >
+          </li>
+          <li>
+            <a href="/Kanbas/Courses/Panopto_Video/screen.html"
+              ><i class="fa fa-plug"></i> Panopto Video</a
+            >
+          </li>
+          <li>
+            <a href="/Kanbas/Courses/Discussions/screen.html"
+              ><i class="fa fa-comments-o"></i> Discussions</a
+            >
+          </li>
+          <li>
+            <a href="/Kanbas/Courses/Announcements/screen.html"
+              ><i class="fa fa-bullhorn"></i> Announcements</a
+            >
+          </li>
+          <li>
+            <a href="/Kanbas/Courses/Pages/screen.html"
+              ><i class="fa fa-file-text"></i> Pages</a
+            >
+          </li>
+          <li>
+            <a href="/Kanbas/Courses/Files/screen.html"
+              ><i class="fa fa-folder"></i> Files</a
+            >
+          </li>
+          <li>
+            <a href="/Kanbas/Courses/Rubrics/screen.html"
+              ><i class="fa fa-list-ol"></i> Rubrics</a
+            >
+          </li>
+          <li>
+            <a href="/Kanbas/Courses/Outcomes/screen.html"
+              ><i class="fa fa-bullseye"></i> Outcomes</a
+            >
+          </li>
+          <li>
+            <a href="/Kanbas/Courses/Collaboration/screen.html"
+              ><i class="fa fa-circle-thin"></i> Collaboration</a
+            >
+          </li>
+          <li>
+            <a href="/Kanbas/Courses/Syllabus/screen.html"
+              ><i class="fa fa-list"></i> Syllabus</a
+            >
+          </li>
+          <li>
+            <a href="/Kanbas/Courses/Settings/screen.html"
+              ><i class="fa fa-cog"></i> Settings</a
+            >
+          </li>
         </ul>
       </div>
-
-        
-        <span class="wd-menu-font">CS4550.12631.202410<br>Modules</span>
-        <form class="form-inline">
-          <i class="fa fa-binoculars p-1" style="color: white;"></i>
-          
-          <button type="button" class="btn btn-dark wd-navbar-menu-icons" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fa fa-chevron-down p-4" style="color: white;"></i>
-          </button>
-          <div class="dropdown-menu w-100">
-            <ul class="wd-kanbas-menu-list">
-              <li class="wd-active">
-                <a href="/Kanbas/Courses/Home/screen.html"
-                  ><i class="fa fa-home"></i> <b>Home</b></a
-                >
-              </li>
-              <li>
-                <a href="/Kanbas/Courses/Modules/screen.html"
-                  ><i class="fa fa-circle-thin"></i> Modules</a
-                >
-              </li>
-              <li>
-                <a href="/Kanbas/Courses/Piazza/index.html"
-                  ><i class="fa fa-plug"></i> Piazza</a
-                >
-              </li>
-              <li>
-                <a href="/Kanbas/Courses/Zoom_Meetings/index.html"
-                  ><i class="fa fa-plug"></i> Zoom Meetings</a
-                >
-              </li>
-              <li>
-                <a href="/Kanbas/Courses/Assignments/screen.html"
-                  ><i class="fa fa-pencil-square-o"></i> Assignments</a
-                >
-              </li>
-              <li>
-                <a href="/Kanbas/Courses/Quizzes/screen.html"
-                  ><i class="fa fa-rocket"></i> Quizzes</a
-                >
-              </li>
-              <li>
-                <a href="/Kanbas/Courses/Grades/screen.html"
-                  ><i class="fa fa-book"></i> Grades</a
-                >
-              </li>
-              <li>
-                <a href="/Kanbas/Courses/People/screen.html"
-                  ><i class="fa fa-users"></i> People</a
-                >
-              </li>
-              <li>
-                <a href="/Kanbas/Courses/Panopto_Video/screen.html"
-                  ><i class="fa fa-plug"></i> Panopto Video</a
-                >
-              </li>
-              <li>
-                <a href="/Kanbas/Courses/Discussions/screen.html"
-                  ><i class="fa fa-comments-o"></i> Discussions</a
-                >
-              </li>
-              <li>
-                <a href="/Kanbas/Courses/Announcements/screen.html"
-                  ><i class="fa fa-bullhorn"></i> Announcements</a
-                >
-              </li>
-              <li>
-                <a href="/Kanbas/Courses/Pages/screen.html"
-                  ><i class="fa fa-file-text"></i> Pages</a
-                >
-              </li>
-              <li>
-                <a href="/Kanbas/Courses/Files/screen.html"
-                  ><i class="fa fa-folder"></i> Files</a
-                >
-              </li>
-              <li>
-                <a href="/Kanbas/Courses/Rubrics/screen.html"
-                  ><i class="fa fa-list-ol"></i> Rubrics</a
-                >
-              </li>
-              <li>
-                <a href="/Kanbas/Courses/Outcomes/screen.html"
-                  ><i class="fa fa-bullseye"></i> Outcomes</a
-                >
-              </li>
-              <li>
-                <a href="/Kanbas/Courses/Collaboration/screen.html"
-                  ><i class="fa fa-circle-thin"></i> Collaboration</a
-                >
-              </li>
-              <li>
-                <a href="/Kanbas/Courses/Syllabus/screen.html"
-                  ><i class="fa fa-list"></i> Syllabus</a
-                >
-              </li>
-              <li>
-                <a href="/Kanbas/Courses/Settings/screen.html"
-                  ><i class="fa fa-cog"></i> Settings</a
-                >
-              </li>
-            </ul>
-          </div>
-        </form>
-      </nav>
-<!-- Add this before the closing </body> tag -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-      
+    </form>
+  </nav>
 </body>

@@ -44,24 +44,24 @@
   float: right;
 }
 
-.wd-remove-hyperlink li a:link { 
-  text-decoration: none; 
+.wd-remove-hyperlink li a:link {
+  text-decoration: none;
   color: black;
-} 
-.wd-remove-hyperlink li a:visited { 
-  text-decoration: none; 
+}
+.wd-remove-hyperlink li a:visited {
+  text-decoration: none;
   color: black;
-} 
-.wd-remove-hyperlink li a:hover { 
-  text-decoration: none; 
+}
+.wd-remove-hyperlink li a:hover {
+  text-decoration: none;
   color: black;
-} 
-.wd-remove-hyperlink li a:active { 
-  text-decoration: none; 
+}
+.wd-remove-hyperlink li a:active {
+  text-decoration: none;
   color: black;
 }
 
-.wd-remove-hyperlink{ 
-  text-decoration: none; 
+.wd-remove-hyperlink {
+  text-decoration: none;
   color: black;
 }
