@@ -1,0 +1,71 @@
+.wd-export-dropdown {
+  background-color: #f8f9fa;
+}
+
+.wd-heading-details {
+  font-size: small;
+  color: gray;
+}
+
+.table > thead {
+  vertical-align: middle;
+}
+.table > tbody > tr > td {
+  text-align: center;
+}
+
+.table > thead > tr > th {
+  text-align: center;
+  font-weight: normal;
+}
+
+.wd-breadcrumb-link a:link {
+  text-decoration: none;
+  color: red;
+  margin: 5px;
+  font-weight: normal;
+}
+
+.wd-breadcrumb-link a:visited {
+  text-decoration: none;
+  color: red;
+  margin: 5px;
+  font-weight: normal;
+}
+
+.wd-table-input {
+  width: 70px;
+  text-align: center;
+}
+
+.wd-table-input-outer {
+  width: 180px;
+}
+
+.wd-table-input-icon {
+  font-size: large;
+  color: gray;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+}
+
+.wd-float-right {
+  float: right;
+}
+
+.input-group-text {
+  background-color: white;
+  border-radius: 0%;
+}
+
+.table-responsive {
+  overflow-y: hidden;
+}
+
+.table {
+  overflow-y: hidden;
+}
+
+.flex-fill {
+  overflow-y: hidden;
+}

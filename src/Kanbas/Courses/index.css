@@ -1,0 +1,39 @@
+.wd-course-heading {
+  color: red;
+  margin-left: 10px;
+  display: flex;
+}
+
+.wd-course-main {
+  margin: 10px;
+}
+
+.wd-separator {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: lightgray;
+}
+
+.wd-breadcrumb-link a:link {
+  text-decoration: none;
+  color: red;
+  margin: 5px;
+  font-weight: normal;
+}
+
+.wd-breadcrumb-link a:visited {
+  text-decoration: none;
+  color: red;
+  margin: 5px;
+  font-weight: normal;
+}
+
+ol {
+  margin-top: 4px;
+}
+
+.wd-custom-breadcrumb {
+  --bs-breadcrumb-divider: '>';
+}
+
+@media (min-width: 768px) {   .d-md-block {     position: static !important; } }

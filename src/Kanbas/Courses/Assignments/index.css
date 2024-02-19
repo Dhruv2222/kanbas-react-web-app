@@ -1,0 +1,84 @@
+.wd-menu-button a:link {
+  padding-right: 20px;
+  color: red;
+  margin-left: 25px;
+}
+
+.wd-menu-button a:visited {
+  padding-right: 20px;
+  color: red;
+  margin-left: 25px;
+}
+
+.wd-breadcrumb-link a:link {
+  text-decoration: none;
+  color: red;
+  margin: 5px;
+}
+
+.wd-breadcrumb-link a:visited {
+  text-decoration: none;
+  color: red;
+  margin: 5px;
+}
+
+.wd-button-style {
+  border-style: solid;
+  border-color: darkgray;
+  height: 40px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.list-group {
+  border-radius: 0px;
+}
+
+.list-group-item {
+  border-radius: 0px;
+}
+
+.wd-40-percent {
+  border: solid;
+  border-width: 1px;
+  border-radius: 15px;
+  border-color: gray;
+  padding: 3px;
+}
+
+.wd-assignment-description {
+  font-size: small;
+  color: gray;
+}
+
+.wd-color-green {
+  color: green;
+}
+
+.wd-assignments-list {
+  --bs-list-group-item-padding-x: 0;
+}
+
+.wd-assignments-list li {
+  padding: 0;
+}
+
+.wd-assignments-list li ul {
+  border-left: solid;
+  border-left-color: green;
+}
+
+.wd-assignment-title {
+  background-color: lightgray;
+}
+
+.wd-assignment-heading a:link {
+  text-decoration: none;
+  color: black;
+}
+
+.wd-assignment-heading a:visited {
+  text-decoration: none;
+  color: black;
+}
