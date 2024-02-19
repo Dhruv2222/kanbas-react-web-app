@@ -84,7 +84,7 @@ function Grades() {
       </div>
 
       <br />
-      <hr style={{ color: "white" }} />
+      <hr style={{ color: "white", margin: '0px'  }} />
 
       <div className="row">
         <div className="col-6 mb-3">
