@@ -46,7 +46,7 @@ function Courses({ c } : {c: any}) {
               <li className="breadcrumb-separator wd-separator">{">"}</li>
               <li className="breadcrumb-item wd-breadcrumb-link">
                 <Link to={`/Kanbas/Courses/${course?._id}/Assignments`}>
-                  Assignment
+                  Assignments
                 </Link>
               </li></>}
               <li className="breadcrumb-separator wd-separator">{">"}</li>
