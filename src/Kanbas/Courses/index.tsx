@@ -1,4 +1,4 @@
-import { courses } from "../../Kanbas/Database";
+// import { courses } from "../../Kanbas/Database";
 import { Link, Navigate, Route, Routes, useLocation, useParams } from "react-router-dom";
 import { HiMiniBars3 } from "react-icons/hi2";
 import "./index.css";
@@ -10,16 +10,19 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Editor";
 import Grades from "./Grades";
 
-function Courses() {
+function Courses({ c } : {c: any}) {
   const { courseId } = useParams();
   const location = useLocation();
   const pathElements = location.pathname.split('/');
   const courseNav = pathElements[pathElements.length - 1];
-  const editAssignment = courseNav.startsWith('A') && courseNav.length === 4;
+  const editAssignment =
+  (courseNav.startsWith('A') && courseNav.length === 4) ||
+  (courseNav.length === 13 && /^\d+$/.test(courseNav));
+
 
   
 
-  const course = courses.find((course) => course._id === courseId);
+  const course = c.find((course : any) => course._id === courseId);
   console.log(course?._id);
 
   return (
