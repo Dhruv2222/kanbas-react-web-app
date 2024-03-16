@@ -120,7 +120,7 @@ function AssignmentEditor() {
                 </div>
                 <div className="col mb-3">
                   <input
-                    type="text"
+                    type="number"
                     className="form-control"
                     id="assignment_points"
                     value={assignmentFromRedux.points}
