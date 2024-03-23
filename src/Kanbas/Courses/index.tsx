@@ -63,10 +63,13 @@ function Courses({ c } : {c: any}) {
           
       </div>
       <hr className="d-none d-md-flex d-flex" style={{marginTop:'0px', marginLeft: '100px'}} />
+      <div className="row m-0">
+      <div className="col-lg-2 p-0 d-none d-lg-block">
       <CourseNavigation />
-      <div>
+      </div>
+      <div className="col-md-10 col-lg-10 p-0">
         <div
-          className="overflow-y-scroll position-fixed bottom-0 end-0"
+          className="overflow-y-scroll bottom-0 end-0"
           style={{ left: "320px", top: "80px" }}
         >
           <Routes>
@@ -82,6 +85,7 @@ function Courses({ c } : {c: any}) {
             <Route path="Grades" element={<Grades/>} />
           </Routes>
         </div>
+      </div>
       </div>
     </div>
   );
