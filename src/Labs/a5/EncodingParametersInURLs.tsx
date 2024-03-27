@@ -4,8 +4,9 @@ function EncodingParametersInURLs() {
   const [a, setA] = useState(34);
   const [b, setB] = useState(23);
   const [welcome, setWelcome] = useState("");
+  const API_BASE = process.env.REACT_APP_API_BASE;
   const fetchWelcome = async () => {
-    const response = await axios.get("http://localhost:4000/a5/welcome");
+    const response = await axios.get(`${API_BASE}/a5/welcome`);
     setWelcome(response.data);
   };
   useEffect(() => {
@@ -14,12 +15,12 @@ function EncodingParametersInURLs() {
   const [result, setResult] = useState(0);
   const fetchSum = async (a: any, b: any) => {
     const response = await
-      axios.get(`http://localhost:4000/a5/add/${a}/${b}`);
+      axios.get(`${API_BASE}/a5/add/${a}/${b}`);
     setResult(response.data);
   };
   const fetchSubtraction = async (a: any, b: any) => {
     const response = await axios.get(
-      `http://localhost:4000/a5/subtract/${a}/${b}`);
+      `${API_BASE}/a5/subtract/${a}/${b}`);
     setResult(response.data);
   };
 
@@ -37,24 +38,24 @@ function EncodingParametersInURLs() {
       <input type="number"
         onChange={(e) => setB(parseFloat(e.target.value))} value={b}/>
       <h3>Path Parameters</h3>
-      <button onClick={() => window.location.href = `http://localhost:4000/a5/add/${a}/${b}`}>
+      <button onClick={() => window.location.href = `${API_BASE}/a5/add/${a}/${b}`}>
       Add {a} + {b}
     </button>
-    <button onClick={() => window.location.href = `http://localhost:4000/a5/subtract/${a}/${b}`}>
+    <button onClick={() => window.location.href = `${API_BASE}/a5/subtract/${a}/${b}`}>
       Subtract {a} - {b}
     </button>
     <br/> <br/>
-    <button onClick={() => window.location.href = `http://localhost:4000/a5/calculator?operation=add&a=34&b=23`}>
+    <button onClick={() => window.location.href = `${API_BASE}/a5/calculator?operation=add&a=34&b=23`}>
       Add {a} + {b}
     </button>
-    <button onClick={() => window.location.href = `http://localhost:4000/a5/calculator?operation=subtract&a=34&b=23`}>
+    <button onClick={() => window.location.href = `${API_BASE}/a5/calculator?operation=subtract&a=34&b=23`}>
       Subtract {a} - {b}
     </button>
     <br/> <br/>
-    <button onClick={() => window.location.href = `http://localhost:4000/a5/calculator?operation=multiply&a=34&b=23`}>
+    <button onClick={() => window.location.href = `${API_BASE}/a5/calculator?operation=multiply&a=34&b=23`}>
       Multiply {a} * {b}
     </button>
-    <button onClick={() => window.location.href = `http://localhost:4000/a5/calculator?operation=divide&a=34&b=23`}>
+    <button onClick={() => window.location.href = `${API_BASE}/a5/calculator?operation=divide&a=34&b=23`}>
       Divide {a} / {b}
     </button>
     <br/> <br/>
