@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {courses} from "../Database";
 import axios from "axios";
+const API_BASE = process.env.REACT_APP_API_BASE;
 // import { courses } from "../Database";
 function Dashboard( {
   c,
@@ -21,7 +22,7 @@ function Dashboard( {
 
 ) 
 { 
-  const promise = axios.get("http://localhost:4000/api/courses");
+  const promise = axios.get(`${API_BASE}/api/courses`);
   promise.then((response) => {
     console.log(response); 
   })
