@@ -1,22 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaCheckCircle, FaEllipsisV, FaPlus } from "react-icons/fa";
 import { MdDeleteForever } from "react-icons/md";
 import { PiNotePencil } from "react-icons/pi";
 import { GoTriangleDown } from "react-icons/go";
 import { Link, useParams } from "react-router-dom";
-import { assignments } from "../../Database";
+// import { assignments } from "../../Database";
 import "./index.css";
 import { useDispatch, useSelector } from "react-redux";
 import { KanbasState } from "../../store";
-import { deleteAssignment } from "./assignmentsReducer";
+import { deleteAssignment, setAssignments } from "./assignmentsReducer";
+import * as client from "./client";
 function Assignments() {
   const { courseId } = useParams();
-  // const assignmentList = assignments.filter(
-  //   (assignment) => assignment.course === courseId
-  // );
+
+  useEffect(() => {
+    client.findAssignmentsForCourse(courseId)
+      .then((assignments) =>
+        dispatch(setAssignments(assignments))
+    );
+  }, [courseId]);
+
+
   const assignmentList = useSelector((state: KanbasState) => 
     state.assignmentsReducer.assignments);
   console.log(assignmentList);
+
   // Function to format a Date object as "MM/DD/YYYY"
 const formatDate = (date: any) => {
   return `${(date.getMonth() + 1).toString().padStart(2, "0")}/
@@ -30,7 +38,11 @@ const handleDeleteConfirmation = (assign_id : any) => {
   if (isConfirmed) {
     // User clicked "Yes", add functionality here
     console.log("User clicked Yes");
-    dispatch(deleteAssignment(assign_id));
+    client.deleteAssignment(assign_id).then((status) => {
+      dispatch(deleteAssignment(assign_id));
+    });
+
+    // dispatch(deleteAssignment(assign_id));
     
   }
 };

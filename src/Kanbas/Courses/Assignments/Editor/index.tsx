@@ -9,6 +9,7 @@ import {
   setAssignment,
 } from "../assignmentsReducer";
 import { KanbasState } from "../../../store";
+import * as client from "../client";
 
 
 
@@ -53,23 +54,35 @@ function AssignmentEditor() {
     assignmentFromRedux = initialAddAssignment
   }
 
+  const handleUpdateModule = async () => {
+    const status = await client.updateAssignment(assignmentFromRedux);
+    dispatch(updateAssignment(assignmentFromRedux));
+    console.log('status--',status);
+  };
+
+
   console.log("assignment--",assignment);
   console.log("assignmentFromReduxTemp--",assignmentFromReduxTemp);
   console.log("assignmentFromRedux--",assignmentFromRedux);
   const { courseId } = useParams();
   const navigate = useNavigate();
   const handleSave = () => {
-    console.log('course---',assignmentFromRedux.course);
     if (assignmentFromRedux.course === "") {
       console.log('adding');
-      dispatch(addAssignment({ ...assignmentFromRedux, assignmentId: new Date().getTime().toString(),
-        course: courseId }));
+      client.createAssignment(courseId, assignmentFromRedux).then((assignmentFromRedux) => {
+        dispatch(addAssignment(assignmentFromRedux));
+      });
+  
+      // dispatch(addAssignment({ ...assignmentFromRedux, assignmentId: new Date().getTime().toString(),
+      //   course: courseId }));
       
       
     }
     else{
       console.log('updating');
-      dispatch(updateAssignment(assignmentFromRedux));
+      // dispatch(updateAssignment(assignmentFromRedux));
+      handleUpdateModule();
+
       
     }
     

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {courses} from "../Database";
+import axios from "axios";
 // import { courses } from "../Database";
 function Dashboard( {
   c,
@@ -17,7 +18,14 @@ function Dashboard( {
   deleteCourse: any;
   updateCourse: any;
 }
-) {
+
+) 
+{ 
+  const promise = axios.get("http://localhost:4000/api/courses");
+  promise.then((response) => {
+    console.log(response); 
+  })
+
   
   return (
     <div className="p-4" style={{marginLeft: '80px'}}>

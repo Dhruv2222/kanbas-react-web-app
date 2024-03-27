@@ -1,4 +1,6 @@
 // import { courses } from "../../Kanbas/Database";
+import axios from "axios";
+import { useState, useEffect } from "react";
 import { Link, Navigate, Route, Routes, useLocation, useParams } from "react-router-dom";
 import { HiMiniBars3 } from "react-icons/hi2";
 import "./index.css";
@@ -10,7 +12,7 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Editor";
 import Grades from "./Grades";
 
-function Courses({ c } : {c: any}) {
+function Courses() {
   const { courseId } = useParams();
   const location = useLocation();
   const pathElements = location.pathname.split('/');
@@ -22,7 +24,20 @@ function Courses({ c } : {c: any}) {
 
   
 
-  const course = c.find((course : any) => course._id === courseId);
+  const COURSES_API = "http://localhost:4000/api/courses";
+  const [course, setCourse] = useState<any>({ _id: "" });
+  const findCourseById = async (courseId?: string) => {
+    const response = await axios.get(
+      `${COURSES_API}/${courseId}`
+    );
+    setCourse(response.data);
+  };
+
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
+
+
   console.log(course?._id);
 
   return (
@@ -63,13 +78,10 @@ function Courses({ c } : {c: any}) {
           
       </div>
       <hr className="d-none d-md-flex d-flex" style={{marginTop:'0px', marginLeft: '100px'}} />
-      <div className="row m-0">
-      <div className="col-lg-2 p-0 d-none d-lg-block">
       <CourseNavigation />
-      </div>
-      <div className="col-md-10 col-lg-10 p-0">
+      <div>
         <div
-          className="overflow-y-scroll bottom-0 end-0"
+          className="overflow-y-scroll position-fixed bottom-0 end-0"
           style={{ left: "320px", top: "80px" }}
         >
           <Routes>
@@ -85,7 +97,6 @@ function Courses({ c } : {c: any}) {
             <Route path="Grades" element={<Grades/>} />
           </Routes>
         </div>
-      </div>
       </div>
     </div>
   );

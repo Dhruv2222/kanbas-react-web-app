@@ -1,31 +1,67 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./index.css";
 import { FaEllipsisV, FaCheckCircle, FaPlusCircle, FaPlus } from "react-icons/fa";
 import { GoTriangleRight, GoTriangleDown } from "react-icons/go";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
   addModule,
   deleteModule,
   updateModule,
   setModule,
+  setModules
 } from "./modulesReducer";
 import { KanbasState } from "../../store";
+import * as client from "./client";
+
 
 
 function ModuleList() {
-  const { courseId } = useParams();
-  const moduleList = useSelector((state: KanbasState) => 
+  let moduleList = useSelector((state: any) => 
     state.modulesReducer.modules);
-  const module = useSelector((state: KanbasState) => 
+    
+    if (moduleList.length === 0) {
+      moduleList = [{
+        _id: "12345",
+        name: "New Module",
+        description: "New Description",
+        course: "", 
+        lessons: [{_id: "123", name: "Sample lesson", description: "Sample description", module: "SampleModule"}]
+      }]
+    }
+
+  const module = useSelector((state: any) => 
     state.modulesReducer.module);
   const dispatch = useDispatch();
+  const { courseId } = useParams();
 
+  const handleAddModule = () => {
+    client.createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
 
+  const handleDeleteModule = (moduleId: any) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
 
+  const handleUpdateModule = async () => {
+    const status = await client.updateModule(module);
+    dispatch(updateModule(module));
+  };
 
+  useEffect(() => {
+    client.findModulesForCourse(courseId) 
+      .then((modules) =>
+        dispatch(setModules(modules))
+    );
+  }, [courseId]); 
 
   const [selectedModule, setSelectedModule] = useState(moduleList[0]);
+  
+  
 
   return (
     <>
@@ -35,10 +71,10 @@ function ModuleList() {
       <div style={{ display: 'flex', alignItems: 'center' }}>
         <button 
         className="btn btn-outline-success m-1 px-1"
-        onClick={() => dispatch(addModule({ ...module, course: courseId }))}>Add</button>
+        onClick={handleAddModule}>Add</button>
         <button 
         className="btn btn-outline-primary m-1 px-1"
-        onClick={() => dispatch(updateModule(module))}>
+        onClick={handleUpdateModule}>
                 Update
         </button>
 
@@ -58,17 +94,17 @@ function ModuleList() {
           </div>
       </li>
 
-        {moduleList
-        .filter((module) => module.course === courseId)
-        .map((module) => (
+        {moduleList.length > 0 && moduleList
+        .filter((module : any) => module.course === courseId)
+        .map((module : any) => (
           <li
+          
             className="list-group-item"
-            onClick={() => setSelectedModule(module)}>
+            onClick={() => setSelectedModule(module)}> 
               
 
               
             <div>
-              
               <FaEllipsisV /> <GoTriangleRight className="me-1" />
               {module.name}
               <span className="float-end">
@@ -77,7 +113,7 @@ function ModuleList() {
               Edit
             </button>
                 <button className="btn btn-outline-danger mx-1 px-1"
-              onClick={() => dispatch(deleteModule(module._id))}>
+              onClick={() => handleDeleteModule(module._id)}>
               Delete
             </button>
                 <FaCheckCircle className="text-success" /> <GoTriangleDown />
@@ -86,7 +122,7 @@ function ModuleList() {
                 
               </span>
               
-            </div>
+            </div> 
             {selectedModule._id === module._id && (
               <ul className="list-group">
                 {module.lessons?.map((lesson : any) => (
